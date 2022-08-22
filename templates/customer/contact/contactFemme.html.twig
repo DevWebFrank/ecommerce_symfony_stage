@@ -1,0 +1,46 @@
+{% extends 'base.html.twig'%}
+
+
+{% block body %}
+	<div class="container py-5">
+		{% include "_messages_flash.html.twig" %}
+
+		<div class="row">
+			<div class="col-12">
+				<a href="{{ path('home')}}" class=" btn btn-secondary">retour accueil</a>
+			</div>
+
+			<div
+				class="row">
+				<!-- <div class="col-12">
+																					<a>contactez-nous</a>
+																				</div> -->
+
+				<div class="col-12 contact">
+					<div class="contactTitle text-center">
+						<h1>Bonjour, comment pouvons nous vous aider ?</h1>
+					</div>
+					<div class="row card-body">
+						<div class="col-6 contact_sidebar_image">
+							<img src="https://thumbs.dreamstime.com/z/i-m-listening-picture-young-woman-attention-over-white-background-30656613.jpg" alt="image contactez-nous">
+						</div>
+						<div class="col-6 contact_sidebar_form">
+							<div class="contactFormLeft">
+								{{ form_start(form)}}
+								{{ form_row(form.email)}}
+								{{ form_widget(form)}}
+								<div class="form-group">
+									<input type="submit" value="Nous faire parvenir" class="btn btn-primary py-3 px-5 w-100">
+								</div>
+
+								<!-- <button class="btn btn-primary mt-1 py-3 px-5 w-100" type="submit" value="#">Nous faire parvenir</button> -->
+								{{ form_end(form)}}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	{% endblock %}

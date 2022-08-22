@@ -1,0 +1,31 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}New Post
+{% endblock %}
+
+{% block body %}
+	<div class="container py-5">
+		<div class="row">
+			<div class="col-12">
+				<a class="btn btn-dark" href="{{ path('admin_footer') }}">Revenir à la liste des mentions</a>
+			</div>
+
+			<div class="col-sm-12 mt-3">
+				<div class="card">
+					<div class="card-header">
+						<h5 class="card-title">Ajouter les mentions</h5>
+					</div>
+					<div class="card-body">
+						{{ form_start(toto) }}
+						{{ form_widget(toto) }}
+						<button class="btn btn-primary mt-3" type="submit">Enregistrer</button>
+						{{ form_end(toto) }}
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+{% endblock %}
+

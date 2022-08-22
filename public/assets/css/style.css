@@ -1,0 +1,95 @@
+.colorBgNav {
+    background-color: #FF8C19;
+}
+
+.button {
+    background-color: rgb(108, 107, 107) !important;
+    border: none;
+    color: rgb(254, 254, 254);
+    padding: 8px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 16px;
+
+}
+
+.products .img {
+    height: 180px;
+    overflow: hidden;
+}
+
+.products .img img {
+    height: 100%;
+    width: auto;
+    /* object-fit: contain; */
+}
+
+/* .imageDetailProduct{
+    height: 400px;
+    object-fit: cover;
+} */
+
+/* refaire les modifs de product mais pour les categories */
+
+.card-title {
+    /* POUR minimaliser le texte sans qu'il sorte de la div*/
+    /* text-overflow: ellipsis; */
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.imgDetailProduct img {
+    height: 50%;
+    object-fit: scale-down;
+}
+
+.fontSize8px {
+    font-size: 8px;
+}
+
+.bgForgotPassword {
+    background-color: grey;
+}
+
+.colorLogo {
+    color: #3070f4 !important;
+}
+
+.logo {
+    color: #FF8C19;
+}
+
+.i {
+    max-width: 10% !important;
+}
+
+.contact-form .contactBg {
+    background-color: darkgray;
+}
+
+.imageCard {
+    height: 300px;
+    object-fit: cover;
+}
+
+.titreProduit {
+    font-weight: bold;
+}
+
+/* CONTACT */
+
+.contact_sidebar_image img {
+    width: 500px;
+}
+
+/* Product details */
+.titleProduct h5 {
+    font-size: x-large;
+}
+
+.textPriceProductDetail {
+    font-size: xx-large;
+}

@@ -1,0 +1,60 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+	<div class="container py-5">
+		{% include "_messages_flash.html.twig" %}
+
+		<div class="row">
+			<div class="col-sm-12 col-md-6">
+				<a href="{{ path('profile_image_edit') }}">
+					<div class="card">
+						<div class="img">
+							<img {% if (app.user.imagePath is same as null) or (app.user.imagePath is same as "") %} src="https://images.timberland.com/is/image/TimberlandEU/A2GSC662-hero?wid=720&hei=720&fit=constrain,1&qlt=85,1&op_usm=1,1,6,0" {% else %} src="{{ app.user.imagePath }}" {% endif %} alt="image_category" class="card-img-top imageCard">
+						</div>
+					</a>
+				</div>
+
+				<div class="card mt-3">
+					<div class="card-header">
+						<h5>Infos perso de Mr
+							{{ app.user.name }}</h5>
+
+					</div>
+					<div class="card-body">
+						<p>Nom :
+							{{ app.user.name }}</p>
+						<p>Adresse :
+							{{ app.user.adresse }}</p>
+						<p>Telephone :
+							{{ app.user.telephone }}</p>
+						<p>Email :
+							{{ app.user.email }}</p>
+					</div>
+				</div>
+
+
+			</div>
+
+			<div class="col-sm-12 col-md-6">
+				<div class="card">
+					<div class="card-header">
+						<h5>Configuration</h5>
+					</div>
+					<div class="card-body">
+						<a href="{{ path('profile_purchase_list') }}" class="btn btn-info w-100">Mes commandes</a>
+						<a href="{{ path('profile_image_edit') }}" class="btn btn-info w-100 mt-1">Modifier ma photo de profil</a>
+						<a href="{{ path('profile_edit_info') }}" class="btn btn-info w-100 mt-1">Modifier mes infos personnelles</a>
+						<a href="{{ path('profile_edit_password') }}" class="btn btn-warning w-100 mt-1">Changer mon mot de passe</a>
+						<a href="{{ path('profile_contact_support') }}" class="btn btn-info w-100 mt-1">Contacter le support</a>
+
+
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+	</div>
+
+
+{% endblock %}
