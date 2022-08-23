@@ -3,7 +3,6 @@
 namespace App\Form;
 
 use App\Entity\Product;
-
 use App\Entity\Category;
 use App\Entity\Color;
 use Symfony\Component\Form\AbstractType;
@@ -38,16 +37,23 @@ class ProductType extends AbstractType
                     'placeholder' => 'ajouter le chemin de l\'image içi'
                 ]
             ])
-            ->add('style', TextType::class, [
-                'label' => 'Style du produit',
-                'required' => false,
-            ])
+            ->add(
+                'style',
+                TextType::class,
+                [
+                    'label' => 'Style du produit',
+                    'required' => false,
+                ]
+            )
+
             ->add('season')
-            ->add('color', EntityType::class, [
-                'label' => 'Choisir la couleur',
-                'placeholder' => '-- Choisir --',
-                'class' => Color::class
-            ])
+            ->add('color')
+            // , EntityType::class, [
+            //     'label' => 'Choisir la couleur',
+            //     'placeholder' => '-- Choisir --',
+            //     'class' => Color::class
+            // ]
+            
             ->add('size')
             ->add('quantity')
             ->add('created_at')

@@ -12,7 +12,7 @@
 			{% include "_messages_flash.html.twig" %}
 
 			<div class="col-12 d-flex align-items-center justify-content-between">
-				<h3>Liste des produitss</h3>
+				<h3>Liste des produits</h3>
 				<div class="navigation">
 					{{ knp_pagination_render(products) }}
 				</div>
@@ -38,13 +38,12 @@
 							<!--<p class="mb-1">{{ product.createdAt ? product.createdAt|date('Y-m-d H:i:s') : '' }}</p>-->
 						</div>
 
-
 					</div>
 					<tbody>
 						<tr>
 							<td>
 								<!--<a href="{{ path('admin/product_show', {'id': product.id}) }}">show</a>-->
-								<a class="btn btn-secondary w-100" href="{{ path('admin/product_edit', {'id': product.id}) }}">Gerer</a>
+								<a class="btn btn-secondary w-80 mx-2" href="{{ path('admin/product_edit', {'id': product.id}) }}">Gerer</a>
 							</td>
 						</tr>
 					</tbody>
